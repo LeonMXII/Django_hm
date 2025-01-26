@@ -70,7 +70,7 @@ WSGI_APPLICATION = 'api_with_restrictions.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mybase',
+        'NAME': os.getenv('db'),
         'USER': 'postgres',
         'PASSWORD': os.getenv('pass'),
         'HOST': '127.0.0.1',
